@@ -1,0 +1,84 @@
+ScreenManager:
+    MenuScreen:
+    SignupScreen:
+    LoginScreen:
+<MenuScreen>:
+    name: "menu"
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDTopAppBar:
+            title: "AutoBackup"
+        MDLabel:
+
+        MDScreen:
+
+            MDBottomNavigation:
+
+                MDBottomNavigationItem:
+                    name: 'screen 1'
+                    text: 'Photos'
+                    icon: 'image'
+
+                    MDLabel:
+                        text: 'Photos'
+                        halign: 'center'
+
+                MDBottomNavigationItem:
+                    name: 'screen 2'
+                    text: 'Videos'
+                    icon: 'video'
+
+
+                    MDLabel:
+                        text: 'Videos'
+                        halign: 'center'
+
+                MDBottomNavigationItem:
+                    name: 'screen 3'
+                    text: 'Audios'
+                    icon: 'music'
+
+                    MDLabel:
+                        text: 'Audios'
+                        halign: 'center'
+
+                MDBottomNavigationItem:
+                    name: 'screen 4'
+                    text: 'Documents'
+                    icon: 'file'
+
+                    MDLabel:
+                        text: 'Documents'
+                        halign: 'center'
+
+
+
+    MDRectangleFlatButton:
+        text: "to Signup"
+        pos_hint: {"center_x":0.5, "center_y": 0.5}
+        on_press: root.manager.current= "signup"
+
+<SignupScreen>:
+    name: "signup"
+    MDLabel:
+        text: "This is signup page"
+        halign: "center"
+    MDRectangleFlatButton:
+        text: "to login"
+        pos_hint: {"center_x":0.5, "center_y": 0.2}
+        on_press: root.manager.current = "login"
+
+
+<LoginScreen>:
+    name: "login"
+    MDLabel:
+        text: "This is a login page"
+        halign: "center"
+    MDRectangleFlatButton:
+        text: "to menu"
+        pos_hint: {"center_x":0.5, "center_y": 0.2}
+        on_press: root.manager.current = "menu"
+
+
+
